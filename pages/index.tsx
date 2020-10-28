@@ -1,12 +1,10 @@
 import React from "react";
-import Name from "../components/name";
-import RoleStyle from "../components/role";
+import Profile from "../components/profile";
 
 export default function Home() {
   return (
     <div>
-      <Name />
-      <RoleStyle />
+      <Profile />
     </div>
   );
 }
