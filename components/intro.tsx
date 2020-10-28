@@ -8,7 +8,7 @@ const IntroStyle = styled.div``;
 const Intro = () => {
   return (
     <IntroStyle className={"intro"}>
-      <Header value={"Header!"} />
+      <Header value={"Hello!"} />
       <IntroDescription />
     </IntroStyle>
   );

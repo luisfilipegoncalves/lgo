@@ -5,7 +5,12 @@ import RoleStyle from "./role";
 import SocialIcons from "./social-icons";
 
 const ProfileStyle = styled.div`
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-bottom: 0.6rem;
+  }
 `;
 
 const Profile = () => {
