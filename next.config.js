@@ -4,6 +4,6 @@ module.exports = {
     role: "Software Engineering Manager",
     twitterProfile: "https://twitter.com/luisfigoncalves",
     githubProfile: "https://github.com/luisfilipegoncalves",
-    linkedinProfile: "https://www.linkedin.com/in/luisfigoncalves/",
+    linkedinProfile: "https://www.linkedin.com/in/luisfigoncalves",
   },
 };

@@ -4,11 +4,13 @@ import Name from "./name";
 import RoleStyle from "./role";
 import SocialIcons from "./social-icons";
 
-const ProfileStyle = styled.div``;
+const ProfileStyle = styled.div`
+  flex-grow: 1;
+`;
 
 const Profile = () => {
   return (
-    <ProfileStyle>
+    <ProfileStyle className={"profile"}>
       <Name />
       <RoleStyle />
       <SocialIcons />
