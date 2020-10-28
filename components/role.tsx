@@ -7,7 +7,7 @@ const RoleStyle = styled.p`
 `;
 
 const Role = () => {
-  return <RoleStyle>Software Engineering Manager</RoleStyle>;
+  return <RoleStyle>{process.env.role}</RoleStyle>;
 };
 
 export default Role;
