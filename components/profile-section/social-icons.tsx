@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SVGIcon from "../components/svg-icon";
-import { SVG } from "../src/types/svgs";
+import SVGIcon from "../common/svg-icon";
+import { SVG } from "../../src/types/svgs";
 
 const SocialDiv = styled.div`
   a {

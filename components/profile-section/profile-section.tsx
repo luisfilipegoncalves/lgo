@@ -4,7 +4,7 @@ import Name from "./name";
 import RoleStyle from "./role";
 import SocialIcons from "./social-icons";
 
-const ProfileStyle = styled.div`
+const ProfileSectionStyle = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -13,14 +13,14 @@ const ProfileStyle = styled.div`
   }
 `;
 
-const Profile = () => {
+const ProfileSection = () => {
   return (
-    <ProfileStyle className={"profile"}>
+    <ProfileSectionStyle className={"profile"}>
       <Name />
       <RoleStyle />
       <SocialIcons />
-    </ProfileStyle>
+    </ProfileSectionStyle>
   );
 };
 
-export default Profile;
+export default ProfileSection;

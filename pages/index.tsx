@@ -1,25 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import Intro from "../components/intro";
-import Profile from "../components/profile";
+import IntroSection from "../components/intro-section/intro-section";
+import ProfileSection from "../components/profile-section/profile-section";
+import TrustedBySection from "../components/trusted-section/trusted-section";
 
 const MainLayout = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  .profile {
-  }
-
-  .intro {
-  }
 `;
 
 export default function Home() {
   return (
     <MainLayout>
-      <Profile />
-      <Intro />
+      <ProfileSection />
+      <IntroSection />
+      <TrustedBySection />
     </MainLayout>
   );
 }
