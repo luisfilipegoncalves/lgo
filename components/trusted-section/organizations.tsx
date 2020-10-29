@@ -5,8 +5,9 @@ import styled from "styled-components";
 const OrganizationsStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 2rem;
+  grid-column-gap: 3rem;
   grid-row-gap: 1rem;
+  align-items: center;
 `;
 
 const organizations = [
@@ -50,8 +51,7 @@ const Organizations = () => {
           key={index}
           src={org.src}
           alt={org.alt}
-          width={org.width}
-          height={org.height}
+          unsized
         />
       ))}
     </OrganizationsStyle>
