@@ -5,6 +5,8 @@ const HeaderStyle = styled.h1`
   font-family: "Roboto Mono", monospace;
   font-weight: 700;
   color: #0000ff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 interface Props {
