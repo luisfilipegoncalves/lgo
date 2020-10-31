@@ -1,14 +1,62 @@
 import React from "react";
+import styled from "styled-components";
+
+const DescriptionStyle = styled.div`
+  a {
+    text-decoration: none;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0;
+  }
+
+  a:hover {
+    border-bottom: 1px solid #0000ff;
+  }
+`;
 
 const IntroDescription = () => {
   return (
-    <p>
-      Next, please. I think we need a rematch. Yeah well look, Marvin, Marvin,
-      you gotta play. See that’s where they kiss for the first time on the dance
-      floor. And if there’s no music, they can’t dance, and if they can’t dance,
-      they can’t kiss, and if they can’t kiss, they can’t fall in love and I’m
-      history.
-    </p>
+    <DescriptionStyle>
+      <p>
+        I'm an Engineering Manager passionate about leading, building, and
+        motivating high-performing engineering teams. With more than 10 years of
+        experience as a software engineer, I am still eager to get my hands
+        dirty with code. Lately, I have been playing around with ReactJS,
+        Typescript, and GraphQL.
+      </p>
+      <p>
+        Currently, Tech Lead at{" "}
+        <a
+          href={"https://www.farfetch.com"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Farfetch
+        </a>
+        , working on authentication and authorization with{" "}
+        <a
+          href={"https://tools.ietf.org/html/rfc6749"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OAuth 2.0
+        </a>{" "}
+        and{" "}
+        <a
+          href={"https://openid.net/connect"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OpenID Connect
+        </a>
+        .
+      </p>
+    </DescriptionStyle>
   );
 };
 
