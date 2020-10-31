@@ -4,6 +4,7 @@ import SVGIcon from "../common/svg-icon";
 import { SVG } from "../../src/types/svgs";
 
 const SocialDiv = styled.div`
+  margin: 0.75rem 0;
   a {
     margin: 0 0.5rem;
   }
