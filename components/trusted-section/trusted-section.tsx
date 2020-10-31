@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../common/header";
+import Section from "../common/sections";
 import Organizations from "./organizations";
 
 const TrustedBySection = () => {
   return (
-    <div className={"trusted"}>
+    <Section className={"trusted"}>
       <Header value={"Trusted By"} />
       <Organizations />
-    </div>
+    </Section>
   );
 };
 

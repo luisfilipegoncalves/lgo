@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../common/header";
+import Section from "../common/sections";
 import IntroDescription from "./intro-description";
 
 const IntroSection = () => {
   return (
-    <div className={"intro"}>
+    <Section className={"intro"}>
       <Header value={"Hello!"} />
       <IntroDescription />
-    </div>
+    </Section>
   );
 };
 
