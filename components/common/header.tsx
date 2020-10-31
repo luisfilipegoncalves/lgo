@@ -6,7 +6,7 @@ const HeaderStyle = styled.h1`
   font-weight: 700;
   color: #0000ff;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 interface Props {
