@@ -1,19 +1,27 @@
 import React from "react";
+import styled from "styled-components";
+
+const SVGStyle = styled.svg`
+  width: 2rem;
+  height: 2rem;
+  fill: #e0e0e0;
+  transition: 0.2s;
+
+  &:hover {
+    fill: #0000ff;
+  }
+`;
 
 interface Props {
-  fill?: string;
   icon: string;
 }
 
 const SVGIcon = (props: Props) => {
-  const { fill = "#E0E0E0", icon } = props;
+  const { icon } = props;
   return (
-    <svg
-      viewBox="0 0 32 32"
-      style={{ width: "2rem", height: "2rem", fill: "#41505e" }}
-    >
-      <path style={{ fill: fill }} d={icon} />
-    </svg>
+    <SVGStyle>
+      <path d={icon} />
+    </SVGStyle>
   );
 };
 export default SVGIcon;
