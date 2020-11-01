@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SectionStyle = styled.div`
   :not(:first-child) {
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 `;
 

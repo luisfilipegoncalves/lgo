@@ -14,7 +14,7 @@ const MainLayout = styled.div`
   .profile {
     margin-top: 1rem;
   }
-  
+
   @media only screen and (max-width: 600px) {
     padding: 0;
   }
@@ -28,19 +28,14 @@ const MainLayout = styled.div`
   }
 `;
 
-const RightPanelStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export default function Home() {
   return (
     <MainLayout>
       <ProfileSection />
-      <RightPanelStyle>
+      <div>
         <IntroSection />
         <TrustedBySection />
-      </RightPanelStyle>
+      </div>
     </MainLayout>
   );
 }
