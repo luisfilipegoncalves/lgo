@@ -10,7 +10,7 @@ const experienceList = [
   {
     company: "Farfetch",
     role: "Engineering Lead",
-    date: "2019 - Present",
+    date: "2019 - Now",
     website: "https://www.farfetch.com/",
   },
   {
