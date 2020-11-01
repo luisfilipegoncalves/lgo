@@ -4,11 +4,11 @@ import styled from "styled-components";
 const SVGStyle = styled.svg`
   width: 2rem;
   height: 2rem;
-  fill: #e0e0e0;
+  fill: var(--white);
   transition: 0.2s;
 
   &:hover {
-    fill: #0000ff;
+    fill: var(--highlight);
   }
 `;
 
