@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeaderStyle = styled.h1`
   font-weight: 700;
-  color: #0000ff;
+  color: var(--highlight);
   margin-top: 1rem;
   margin-bottom: 2rem;
 `;

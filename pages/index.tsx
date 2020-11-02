@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ExperienceSection from "../components/experience-section/experience-setion";
 import IntroSection from "../components/intro-section/intro-section";
 import ProfileSection from "../components/profile-section/profile-section";
 import TrustedBySection from "../components/trusted-section/trusted-section";
@@ -35,6 +36,7 @@ export default function Home() {
       <div>
         <IntroSection />
         <TrustedBySection />
+        <ExperienceSection />
       </div>
     </MainLayout>
   );

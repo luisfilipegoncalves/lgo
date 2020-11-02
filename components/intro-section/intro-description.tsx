@@ -9,13 +9,13 @@ const DescriptionStyle = styled.div`
     -o-transition: 0.2s;
     transition: 0.2s;
     cursor: pointer;
-    color: #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
     padding-bottom: 0;
   }
 
   a:hover {
-    border-bottom: 1px solid #0000ff;
+    border-bottom: 1px solid var(--highlight);
   }
 `;
 
@@ -25,9 +25,9 @@ const IntroDescription = () => {
       <p>
         I'm an Engineering Manager passionate about leading, building, and
         motivating high-performing engineering teams. With more than 10 years of
-        experience as a software engineer, I'm still eager to get my hands
-        dirty with code. Lately, I have been playing around with ReactJS,
-        TypeScript, and GraphQL.
+        experience as a software engineer, I'm still eager to get my hands dirty
+        with code. Lately, I have been playing around with ReactJS, TypeScript,
+        and GraphQL.
       </p>
       <p>
         Currently, Tech Lead at{" "}

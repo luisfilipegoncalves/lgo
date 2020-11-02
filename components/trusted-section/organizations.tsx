@@ -31,7 +31,7 @@ const organizations = [
   },
   {
     src: "/organizations/taikai.svg",
-    alt: "Taikai",
+    alt: "TAIKAI",
   },
   {
     src: "/organizations/euronext.svg",
