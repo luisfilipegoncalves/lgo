@@ -5,9 +5,8 @@ const ExperienceItemStyle = styled.li`
   grid-template-columns: 1fr 2fr;
   list-style-type: none;
   padding: 1rem 0;
-  font-weight: 400;
   :not(:last-child) {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--darkgrey);
   }
 
   span {

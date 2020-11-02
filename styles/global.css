@@ -2,6 +2,7 @@
 
 body {
   --white: #e0e0e0;
+  --darkgrey: #707070;
   --highlight: #0000ff;
 
   font-family: "Roboto Mono", monospace;
