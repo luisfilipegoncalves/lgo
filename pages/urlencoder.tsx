@@ -17,8 +17,7 @@ const UrlDecoderPage = () => {
       reverseToolName={"URL Decoder Tool"}
       reverseToolUrl={"/urldecoder"}
       onChange={(event) => {
-        const newUrl = event.target.value;
-        setUrlInputValue(newUrl);
+        setUrlInputValue(event.target.value);
       }}
     />
   );
