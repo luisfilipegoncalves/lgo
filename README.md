@@ -10,7 +10,7 @@ You can preview the lastest version of the website here:
 
 ```bash
 cd lgo
-npm run dev
+yarn dev
 ```
 
 ## Tech Stack

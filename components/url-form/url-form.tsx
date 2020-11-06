@@ -1,0 +1,88 @@
+import { Box, Grommet, TextArea } from "grommet";
+import styled from "styled-components";
+import Link from "next/link";
+import Header from "../common/header";
+import Anchor from "../styles/anchor";
+
+interface URLFormProps {
+  pageTitle: string;
+  inputPlaceholder: string;
+  inputValue: string;
+  inputA11yTitle: string;
+  outputPlaceholder: string;
+  outputValue: string;
+  outputA11yTitle: string;
+  reverseToolUrl: string;
+  reverseToolName: string;
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  div {
+    margin-top: 3rem;
+  }
+
+  a {
+    padding-top: 6rem;
+    align-self: flex-end;
+  }
+`;
+
+const URLForm = (props: URLFormProps) => {
+  const {
+    pageTitle,
+    inputPlaceholder,
+    inputValue,
+    inputA11yTitle,
+    outputValue,
+    outputPlaceholder,
+    outputA11yTitle,
+    reverseToolUrl,
+    reverseToolName,
+    onChange,
+  } = props;
+  return (
+    <Grommet
+      theme={{
+        global: {
+          colors: { border: "var(--white)" },
+          focus: { border: { color: "var(--highlight)" } },
+          elevation: { light: { medium: "0px 0px 8px var(--darkgrey)" } },
+        },
+        anchor: {
+          color: "red",
+        },
+      }}
+    >
+      <Wrapper>
+        <Header value={pageTitle} />
+        <Box align="center" elevation={"medium"}>
+          <TextArea
+            placeholder={inputPlaceholder}
+            a11yTitle={inputA11yTitle}
+            value={inputValue}
+            resize={"vertical"}
+            onChange={onChange}
+          />
+        </Box>
+        <Box align="center" gap={"large"} elevation={"medium"}>
+          <TextArea
+            placeholder={outputPlaceholder}
+            a11yTitle={outputA11yTitle}
+            value={outputValue}
+            resize={"vertical"}
+            readOnly
+          />
+        </Box>
+        <Link href={reverseToolUrl}>
+          <Anchor>{reverseToolName}</Anchor>
+        </Link>
+      </Wrapper>
+    </Grommet>
+  );
+};
+
+export default URLForm;

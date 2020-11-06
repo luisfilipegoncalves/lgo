@@ -1,27 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-
-const DescriptionStyle = styled.div`
-  a {
-    text-decoration: none;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    cursor: pointer;
-    color: var(--white);
-    border-bottom: 1px solid var(--white);
-    padding-bottom: 0;
-  }
-
-  a:hover {
-    border-bottom: 1px solid var(--highlight);
-  }
-`;
+import Anchor from "../styles/anchor";
 
 const IntroDescription = () => {
   return (
-    <DescriptionStyle>
+    <div>
       <p>
         I'm an Engineering Manager passionate about leading, building, and
         motivating high-performing engineering teams. With more than 10 years of
@@ -31,32 +13,32 @@ const IntroDescription = () => {
       </p>
       <p>
         Currently, Tech Lead at{" "}
-        <a
+        <Anchor
           href={"https://www.farfetch.com"}
           target="_blank"
           rel="noopener noreferrer"
         >
           Farfetch
-        </a>
+        </Anchor>
         , working on authentication and authorization with{" "}
-        <a
+        <Anchor
           href={"https://tools.ietf.org/html/rfc6749"}
           target="_blank"
           rel="noopener noreferrer"
         >
           OAuth 2.0
-        </a>{" "}
+        </Anchor>{" "}
         and{" "}
-        <a
+        <Anchor
           href={"https://openid.net/connect"}
           target="_blank"
           rel="noopener noreferrer"
         >
           OpenID Connect
-        </a>
+        </Anchor>
         .
       </p>
-    </DescriptionStyle>
+    </div>
   );
 };
 
