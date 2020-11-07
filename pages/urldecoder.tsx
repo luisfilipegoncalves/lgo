@@ -1,11 +1,6 @@
-import { Table, TableBody, TableCell, TableHeader, TableRow } from "grommet";
 import React, { useState } from "react";
-import URLForm from "../components/url-form/url-form";
-
-interface QueryParam {
-  key: string;
-  value: string;
-}
+import QueryParams, { QueryParam } from "../components/url-tools/query-params";
+import URLForm from "../components/url-tools/url-form";
 
 const getQueryParams = (urlDecoded: string) => {
   if (!urlDecoded) return [];
@@ -42,28 +37,7 @@ const UrlDecoderPage = () => {
         setUrlInputValue(event.target.value);
       }}
     >
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableCell scope="col" border="bottom">
-              Param
-            </TableCell>
-            <TableCell scope="col" border="bottom">
-              Value
-            </TableCell>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {queryParams.map((query, index) => (
-            <TableRow key={index}>
-              <TableCell scope="row">
-                <strong>{query.key}</strong>
-              </TableCell>
-              <TableCell>{query.value}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <QueryParams params={queryParams} />
     </URLForm>
   );
 };
