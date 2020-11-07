@@ -14,6 +14,7 @@ interface URLFormProps {
   outputA11yTitle: string;
   reverseToolUrl: string;
   reverseToolName: string;
+  children?: React.ReactNode;
   onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
   }
 
   a {
-    padding-top: 6rem;
+    padding-top: 3rem;
     align-self: flex-end;
   }
 `;
@@ -43,6 +44,7 @@ const URLForm = (props: URLFormProps) => {
     reverseToolUrl,
     reverseToolName,
     onChange,
+    children,
   } = props;
   return (
     <Grommet
@@ -51,9 +53,6 @@ const URLForm = (props: URLFormProps) => {
           colors: { border: "var(--white)" },
           focus: { border: { color: "var(--highlight)" } },
           elevation: { light: { medium: "0px 0px 8px var(--darkgrey)" } },
-        },
-        anchor: {
-          color: "red",
         },
       }}
     >
@@ -77,6 +76,7 @@ const URLForm = (props: URLFormProps) => {
             readOnly
           />
         </Box>
+        <div>{children}</div>
         <Link href={reverseToolUrl}>
           <Anchor>{reverseToolName}</Anchor>
         </Link>
