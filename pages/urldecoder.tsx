@@ -1,10 +1,27 @@
 import React, { useState } from "react";
-import URLForm from "../components/url-form/url-form";
+import QueryParams, { QueryParam } from "../components/url-tools/query-params";
+import URLForm from "../components/url-tools/url-form";
+
+const getQueryParams = (urlDecoded: string) => {
+  if (!urlDecoded) return [];
+
+  try {
+    const url = new URL(urlDecoded);
+    const searchParams = url.searchParams;
+    const queryParams: QueryParam[] = [];
+    for (const [key, value] of searchParams.entries()) {
+      queryParams.push({ key, value });
+    }
+    return queryParams;
+  } catch (_e) {
+    return [];
+  }
+};
 
 const UrlDecoderPage = () => {
   const [urlInputValue, setUrlInputValue] = useState("");
   const urlDecoded = decodeURIComponent(urlInputValue);
-
+  const queryParams = getQueryParams(urlDecoded);
   return (
     <URLForm
       pageTitle={"URL Decoder"}
@@ -19,7 +36,9 @@ const UrlDecoderPage = () => {
       onChange={(event) => {
         setUrlInputValue(event.target.value);
       }}
-    />
+    >
+      <QueryParams params={queryParams} />
+    </URLForm>
   );
 };
 

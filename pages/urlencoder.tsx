@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import URLForm from "../components/url-form/url-form";
+import URLForm from "../components/url-tools/url-form";
 
-const UrlDecoderPage = () => {
+const UrlEncoderPage = () => {
   const [urlInputValue, setUrlInputValue] = useState("");
   const urlEncoded = encodeURIComponent(urlInputValue);
 
@@ -23,4 +23,4 @@ const UrlDecoderPage = () => {
   );
 };
 
-export default UrlDecoderPage;
+export default UrlEncoderPage;
