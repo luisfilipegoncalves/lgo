@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import URLForm from "../components/url-form/url-form";
+import URLForm from "../components/url-tools/url-form";
 
 const UrlEncoderPage = () => {
   const [urlInputValue, setUrlInputValue] = useState("");
