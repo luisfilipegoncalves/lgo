@@ -1,4 +1,4 @@
-import { Box, Grommet, TextArea } from "grommet";
+import { Box, TextArea } from "grommet";
 import styled from "styled-components";
 import Link from "next/link";
 import Header from "../common/header";
@@ -47,41 +47,31 @@ const URLForm = (props: URLFormProps) => {
     children,
   } = props;
   return (
-    <Grommet
-      theme={{
-        global: {
-          colors: { border: "var(--white)" },
-          focus: { border: { color: "var(--highlight)" } },
-          elevation: { light: { medium: "0px 0px 8px var(--darkgrey)" } },
-        },
-      }}
-    >
-      <Wrapper>
-        <Header value={pageTitle} />
-        <Box align="center" elevation={"medium"}>
-          <TextArea
-            placeholder={inputPlaceholder}
-            a11yTitle={inputA11yTitle}
-            value={inputValue}
-            resize={"vertical"}
-            onChange={onChange}
-          />
-        </Box>
-        <Box align="center" gap={"large"} elevation={"medium"}>
-          <TextArea
-            placeholder={outputPlaceholder}
-            a11yTitle={outputA11yTitle}
-            value={outputValue}
-            resize={"vertical"}
-            readOnly
-          />
-        </Box>
-        <div>{children}</div>
-        <Link href={reverseToolUrl}>
-          <Anchor>{reverseToolName}</Anchor>
-        </Link>
-      </Wrapper>
-    </Grommet>
+    <Wrapper>
+      <Header value={pageTitle} />
+      <Box align="center" elevation={"medium"}>
+        <TextArea
+          placeholder={inputPlaceholder}
+          a11yTitle={inputA11yTitle}
+          value={inputValue}
+          resize={"vertical"}
+          onChange={onChange}
+        />
+      </Box>
+      <Box align="center" gap={"large"} elevation={"medium"}>
+        <TextArea
+          placeholder={outputPlaceholder}
+          a11yTitle={outputA11yTitle}
+          value={outputValue}
+          resize={"vertical"}
+          readOnly
+        />
+      </Box>
+      <div>{children}</div>
+      <Link href={reverseToolUrl}>
+        <Anchor>{reverseToolName}</Anchor>
+      </Link>
+    </Wrapper>
   );
 };
 
