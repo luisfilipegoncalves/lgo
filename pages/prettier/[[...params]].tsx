@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Router, { useRouter } from "next/router";
 import { Plugin } from "prettier";
-import prettier from "prettier/standalone";
+import { Copy, TextAlignLeft } from "grommet-icons";
+const copy = require("clipboard-copy");
 
 import GrommetContainer from "../../components/common/grommet-container";
 import Header from "../../components/common/header";
 import ParserSelect from "../../components/prettier/parser-select";
-import { Copy, TextAlignLeft } from "grommet-icons";
-const copy = require("clipboard-copy");
+import {
+  parseInput,
+  getPrettierParser,
+} from "../../utils/prettier/prettier-utils";
 
 const PrettierEditorStyle = styled.div`
   display: flex;
@@ -26,56 +29,6 @@ const OptionsStyle = styled.div`
   margin: 1rem 0;
 `;
 
-const getParser = async (parserMode: string) => {
-  let parserTool: Plugin | null = null;
-  switch (parserMode) {
-    case "json":
-      parserTool = (await import("prettier/parser-babel")).default;
-      break;
-    case "graphql":
-      parserTool = (await import("prettier/parser-graphql")).default;
-      break;
-    case "typescript":
-      parserTool = (await import("prettier/parser-typescript")).default;
-      break;
-    case "css":
-      parserTool = (await import("prettier/parser-postcss")).default;
-      break;
-    case "html":
-      parserTool = (await import("prettier/parser-html")).default;
-      break;
-    case "yaml":
-      parserTool = (await import("prettier/parser-yaml")).default;
-      break;
-    default:
-      parserTool = (await import("prettier/parser-babel")).default;
-      break;
-  }
-  return parserTool;
-};
-
-const parseInput = async (
-  value: string,
-  parserMode: string,
-  parser: Plugin<any>
-) => {
-  if (!value) {
-    return { text: "", error: "" };
-  }
-
-  try {
-    const res = prettier.format(value, {
-      semi: false,
-      parser: parserMode,
-      plugins: [parser],
-    });
-
-    return { text: res, error: "" };
-  } catch (error) {
-    return { text: value, error: error.message };
-  }
-};
-
 const PrettierPage = () => {
   const router = useRouter();
   const [parserMode = "json"] = router.query?.params ?? [];
@@ -87,7 +40,7 @@ const PrettierPage = () => {
 
   useEffect(() => {
     async function loadParser() {
-      const loadedParser = await getParser(parserMode);
+      const loadedParser = await getPrettierParser(parserMode);
       setParser(loadedParser);
     }
     loadParser();
@@ -116,7 +69,7 @@ const PrettierPage = () => {
                 disabled={!inputValue}
                 onClick={async () => {
                   if (!parser) {
-                    console.error("Failed to load the prettier parser.");
+                    setParseError("Failed to load the prettier parser.");
                     return;
                   }
                   const { text, error } = await parseInput(
