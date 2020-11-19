@@ -29,9 +29,9 @@ const tools = [
       "Tool to encode a Uniform Resource Identifier (URI) by replacing each instance of certain characters by sequences representing the UTF-8 encoding of the character.",
   },
   {
-    href: "/json",
-    name: "JSON Formatter and Validator",
-    description: "Tool to validate, format and beautify JSON data",
+    href: "/prettier",
+    name: "Prettier Formatter and Validator",
+    description: "Tool to validate, format and beautify your data ( JSON, yaml, css, html, typescript, graphql )",
   },
 ];
 
