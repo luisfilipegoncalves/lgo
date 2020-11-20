@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "clipboard-copy": "^4.0.1",
@@ -24,6 +25,7 @@
     "@types/styled-components": "^5.1.4",
     "@typescript-eslint/typescript-estree": "^4.8.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "cypress": "^5.6.0",
     "grommet-icons": "^4.5.0",
     "postcss-less": "^4.0.0",
     "postcss-scss": "^3.0.4",
