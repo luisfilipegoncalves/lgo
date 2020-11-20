@@ -1,3 +1,4 @@
+
 # Welcome
 
 Welcome to my portfolio and playground project.
@@ -6,14 +7,18 @@ You can preview the lastest version of the website here:
 
 - https://lgo.vercel.app
 
-## How to run 
+# Tests
+
+[![lgo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5wcqhx/lgo-add-e2e-tests&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/5wcqhx/runs)
+
+# How to run 
 
 ```bash
 cd lgo
 yarn dev
 ```
 
-## Tech Stack
+# Tech Stack
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
