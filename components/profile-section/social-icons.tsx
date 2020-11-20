@@ -12,16 +12,19 @@ const SocialDiv = styled.div`
 
 const socialLinksData = [
   {
+    testId: "twitter",
     title: "twitter",
     href: process.env.twitterProfile,
     svg: SVG.TWITTER,
   },
   {
+    testId: "github",
     title: "github",
     href: process.env.githubProfile,
     svg: SVG.GITHUB,
   },
   {
+    testId: "linkedin",
     title: "linkedin",
     href: process.env.linkedinProfile,
     svg: SVG.LINKEDIN,
@@ -37,6 +40,7 @@ const SocialIcons = () => {
           href={socialLink.href}
           target="_blank"
           rel="noopener noreferrer"
+          data-cy={socialLink.testId}
         >
           <SVGIcon icon={socialLink.svg} />
         </a>
