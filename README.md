@@ -9,7 +9,7 @@ You can preview the lastest version of the website here:
 
 # Tests
 
-[![lgo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5wcqhx/lgo-add-e2e-tests&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/5wcqhx/runs)
+[![lgo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5wcqhx/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/5wcqhx/runs)
 
 # How to run 
 
