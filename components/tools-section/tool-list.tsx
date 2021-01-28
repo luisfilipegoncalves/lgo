@@ -31,7 +31,18 @@ const tools = [
   {
     href: "/prettier",
     name: "Prettier Formatter and Validator",
-    description: "Tool to validate, format and beautify your data ( JSON, yaml, css, html, typescript, graphql )",
+    description:
+      "Tool to validate, format and beautify your data ( JSON, yaml, css, html, typescript, graphql )",
+  },
+  {
+    href: "/base64decoder",
+    name: "Base 64 Decoder",
+    description: "Tool to decode data from Base64 format",
+  },
+  {
+    href: "/base64encoder",
+    name: "Base 64 Encoder",
+    description: "Tool to encode data to Base64 format",
   },
 ];
 
