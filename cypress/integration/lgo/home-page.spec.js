@@ -31,5 +31,14 @@ context("Home Page", () => {
     cy.contains(/Prettier Formatter and Validator/i).click();
     cy.url().should("include", "/prettier");
     cy.go("back");
+
+    cy.contains(/Base 64 Decoder/i).click();
+    cy.url().should("include", "/base64decoder");
+    cy.go("back");
+
+    cy.contains(/Base 64 Encoder/i).click();
+    cy.url().should("include", "/base64encoder");
+    cy.go("back");
+
   });
 });
