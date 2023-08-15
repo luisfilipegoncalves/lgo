@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@babel/parser": "^7.22.10",
+    "@vercel/analytics": "^1.0.2",
     "clipboard-copy": "^4.0.1",
     "graphql": "^16.8.0",
     "grommet": "^2.33.1",
