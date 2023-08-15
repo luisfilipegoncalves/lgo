@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import Anchor from "../styles/anchor";
 
 const ToolsStyle = styled.ul`
   padding-inline-start: 0;
@@ -52,7 +51,7 @@ const ToolList = () => {
       {tools.map((tool, index) => (
         <li key={index}>
           <Link href={tool.href}>
-            <Anchor>{tool.name}</Anchor>
+            {tool.name}
           </Link>
           <p>{tool.description}</p>
         </li>

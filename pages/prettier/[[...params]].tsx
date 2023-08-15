@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Router, { useRouter } from "next/router";
 import { Plugin } from "prettier";
 import { Copy, TextAlignLeft } from "grommet-icons";
-const copy = require("clipboard-copy");
+import copy from "clipboard-copy";
 
 import GrommetContainer from "../../components/common/grommet-container";
 import Header from "../../components/common/header";

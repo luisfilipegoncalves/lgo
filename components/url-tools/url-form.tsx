@@ -1,8 +1,7 @@
 import { Box, TextArea } from "grommet";
 import styled from "styled-components";
-import Link from "next/link";
 import Header from "../common/header";
-import Anchor from "../styles/anchor";
+import Link from "next/link";
 
 interface URLFormProps {
   pageTitle: string;
@@ -69,7 +68,7 @@ const URLForm = (props: URLFormProps) => {
       </Box>
       <div>{children}</div>
       <Link href={reverseToolUrl}>
-        <Anchor>{reverseToolName}</Anchor>
+        {reverseToolName}
       </Link>
     </Wrapper>
   );

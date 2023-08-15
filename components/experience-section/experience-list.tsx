@@ -8,9 +8,15 @@ const ExperienceListStyle = styled.ul`
 
 const experienceList = [
   {
+    company: "Anchorage Digital",
+    role: "Senior Frontend Engineer",
+    date: "2021 - Now",
+    website: "https://anchorage.com/",
+  },
+  {
     company: "Farfetch",
     role: "Engineering Lead",
-    date: "2019 - Now",
+    date: "2019 - 2021",
     website: "https://www.farfetch.com/",
   },
   {
@@ -33,9 +39,9 @@ const experienceList = [
   },
   {
     company: "VicomTech",
-    role: "Software Engineer",
+    role: "Software Engineer Intern",
     date: "2009",
-    website: "http://vicomtech.org",
+    website: "https://www.vicomtech.org/en",
   },
 ];
 
