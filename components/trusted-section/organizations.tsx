@@ -26,6 +26,10 @@ const OrganizationsStyle = styled.div`
 
 const organizations = [
   {
+    src: "/organizations/anchoragedigital.svg",
+    alt: "Anchorage Digital",
+  },
+  {
     src: "/organizations/farfetch.svg",
     alt: "Farfetch",
   },
@@ -57,7 +61,6 @@ const Organizations = () => {
           alt={org.alt}
           width={130}
           height={60}
-          layout={"responsive"}
         />
       ))}
     </OrganizationsStyle>

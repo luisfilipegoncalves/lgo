@@ -22,7 +22,10 @@ const CompanyStyle = styled.a`
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  color: var(--white);
+  border-bottom: none;
+  :hover {
+    border-bottom: none;
+  }
 `;
 
 interface ExperienceItemProps {
