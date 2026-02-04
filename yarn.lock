@@ -1373,10 +1373,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@vercel/analytics@npm:1.0.2"
-  checksum: 5f596db6ed3c959057927985ffc6394ab12f9a5e9e9c65d00a33f1ffb3a7ced95d63f33b31e746939e50c0284d7999b90e9ed5d3d1e8b0d37a135219fd93a6e4
+"@vercel/analytics@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@vercel/analytics@npm:1.6.1"
+  peerDependencies:
+    "@remix-run/react": ^2
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19 || ^19.0.0-rc
+    svelte: ">= 4"
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@remix-run/react":
+      optional: true
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 07c91bb26b0328ba59790e1563b40548959289d1b447ac9512652766d39eab96fa618ddf9b51ef2683e10bf7c1485ae8abc4834b70757c78cbaff473a1f83203
   languageName: node
   linkType: hard
 
@@ -4811,7 +4834,7 @@ __metadata:
     "@types/react": ^18.0.14
     "@types/react-dom": ^18.0.5
     "@types/styled-components": ^5.1.25
-    "@vercel/analytics": ^1.0.2
+    "@vercel/analytics": ^1.6.1
     clipboard-copy: ^4.0.1
     graphql: ^16.8.1
     grommet: ^2.33.1
