@@ -1,4 +1,3 @@
-import React from "react";
 import Section from "../common/sections";
 import ExperienceList from "./experience-list";
 

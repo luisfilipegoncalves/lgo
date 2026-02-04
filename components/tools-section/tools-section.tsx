@@ -1,4 +1,3 @@
-import React from "react";
 import Section from "../common/sections";
 import ToolList from "./tool-list";
 

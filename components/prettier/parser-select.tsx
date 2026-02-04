@@ -1,13 +1,6 @@
 import { Select } from "grommet";
 
-const parserOptions = [
-  "css",
-  "typescript",
-  "json",
-  "graphql",
-  "html",
-  "yaml",
-];
+const parserOptions = ["css", "typescript", "json", "graphql", "html", "yaml"];
 
 interface ToolsSelectProps {
   parserMode: string;

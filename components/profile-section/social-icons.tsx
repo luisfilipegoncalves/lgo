@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import SVGIcon from "../common/svg-icon";
 import { SVG } from "../../types/svgs";
+import SVGIcon from "../common/svg-icon";
 
 const SocialDiv = styled.div`
   margin: 0.75rem 0;

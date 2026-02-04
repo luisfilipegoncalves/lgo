@@ -1,5 +1,5 @@
 import { Grommet } from "grommet";
-import React from "react";
+import type React from "react";
 
 interface GrommetContainerProps {
   children: React.ReactNode;
