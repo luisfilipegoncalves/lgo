@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -55,13 +54,7 @@ const Organizations = () => {
   return (
     <OrganizationsStyle>
       {organizations.map((org, index) => (
-        <Image
-          key={index}
-          src={org.src}
-          alt={org.alt}
-          width={130}
-          height={60}
-        />
+        <Image key={index} src={org.src} alt={org.alt} width={130} height={60} />
       ))}
     </OrganizationsStyle>
   );

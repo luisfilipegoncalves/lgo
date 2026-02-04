@@ -11,7 +11,7 @@ interface QueryParamsProps {
 
 const QueryParams = (props: QueryParamsProps) => {
   const { params } = props;
-  if (params.length === 0) return <></>;
+  if (params.length === 0) return null;
   return (
     <Table>
       <TableHeader>

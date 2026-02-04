@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import styled from "styled-components";
 
 const ToolsStyle = styled.ul`
@@ -50,9 +49,7 @@ const ToolList = () => {
     <ToolsStyle>
       {tools.map((tool, index) => (
         <li key={index}>
-          <Link href={tool.href}>
-            {tool.name}
-          </Link>
+          <Link href={tool.href}>{tool.name}</Link>
           <p>{tool.description}</p>
         </li>
       ))}

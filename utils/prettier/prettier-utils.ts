@@ -1,7 +1,7 @@
-import { Plugin } from "prettier";
-import prettier from "prettier/standalone";
+import type { Plugin } from "prettier";
 // TODO estree plugin should be loaded when printing JavaScript, TypeScript, Flow, or JSON.
 import estreePlugin from "prettier/plugins/estree";
+import prettier from "prettier/standalone";
 
 export const getPrettierParser = async (parserMode: string) => {
   let parserTool: Plugin | null = null;
@@ -31,11 +31,7 @@ export const getPrettierParser = async (parserMode: string) => {
   return parserTool;
 };
 
-export const parseInput = async (
-  value: string,
-  parserMode: string,
-  parser: Plugin<any>
-) => {
+export const parseInput = async (value: string, parserMode: string, parser: Plugin<any>) => {
   if (!value) {
     return { text: "", error: "" };
   }

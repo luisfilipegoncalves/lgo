@@ -1,18 +1,15 @@
+import copy from "clipboard-copy";
 import { Box, Button, Keyboard, TextArea } from "grommet";
+import { Copy, TextAlignLeft } from "grommet-icons";
+import Router, { useRouter } from "next/router";
+import type { Plugin } from "prettier";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Router, { useRouter } from "next/router";
-import { Plugin } from "prettier";
-import { Copy, TextAlignLeft } from "grommet-icons";
-import copy from "clipboard-copy";
 
 import GrommetContainer from "../../components/common/grommet-container";
 import Header from "../../components/common/header";
 import ParserSelect from "../../components/prettier/parser-select";
-import {
-  parseInput,
-  getPrettierParser,
-} from "../../utils/prettier/prettier-utils";
+import { getPrettierParser, parseInput } from "../../utils/prettier/prettier-utils";
 
 const PrettierEditorStyle = styled.div`
   display: flex;
@@ -72,11 +69,7 @@ const PrettierPage = () => {
                     setParseError("Failed to load the prettier parser.");
                     return;
                   }
-                  const { text, error } = await parseInput(
-                    inputValue,
-                    parserMode,
-                    parser
-                  );
+                  const { text, error } = await parseInput(inputValue, parserMode, parser);
                   setInputValue(text);
                   setParseError(error);
                 }}

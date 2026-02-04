@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import GrommetContainer from "../components/common/grommet-container";
-import QueryParams, { QueryParam } from "../components/url-tools/query-params";
+import QueryParams, { type QueryParam } from "../components/url-tools/query-params";
 import URLForm from "../components/url-tools/url-form";
 
 const getQueryParams = (urlDecoded: string) => {
