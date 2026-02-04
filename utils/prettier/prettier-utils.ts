@@ -49,6 +49,7 @@ export const parseInput = async (
 
     return { text: res, error: "" };
   } catch (error) {
-    return { text: value, error: error.message };
+    const message = error instanceof Error ? error.message : String(error);
+    return { text: value, error: message };
   }
 };
